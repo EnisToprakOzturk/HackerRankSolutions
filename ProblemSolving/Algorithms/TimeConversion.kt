@@ -39,6 +39,29 @@ fun timeConversion(s: String): String {
     return ("$temp:$minAndSec")
 }
 
+/*
+fun timeConversion(s: String): String {
+    
+    val pm = "PM$".toRegex()
+    val am = "AM$".toRegex()
+    val time = s.split(":")
+    
+    var hour = time[0]
+    var minute = time[1]
+    var second = time[2].take(2)
+    
+    if(pm.containsMatchIn(s) && hour == "12"){
+        hour = "12"
+    }else if(pm.containsMatchIn(s)){
+        hour = (hour.toInt() + 12).toString()
+    }else if(am.containsMatchIn(s) && hour == "12"){
+        hour = "00"
+    }
+    
+    return("$hour:$minute:$second")
+}
+ */
+
 fun main(args: Array<String>) {
     val s = readLine()!!
 
